@@ -1,0 +1,5 @@
+# ignore vscode directories
+__pycache__/
+.idea/
+
+dictionary.json
