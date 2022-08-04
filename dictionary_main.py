@@ -1,7 +1,14 @@
 import tkinter as tk
 from dictionary_database import search_all_matching, search_word, get_all_words
 from tkinter import IntVar
+import pyglet
 import os
+
+pyglet.font.add_file('fonts/GOTHICB.TTF')
+# pyglet.font.add_file('fonts/Base 02.ttf')
+
+gothic = pyglet.font.load('Century Gothic')
+# digital = pyglet.font.load('Digital-7 Mono')
 
 BASE_DIR = os.path.dirname( os.path.abspath(__file__))
 
@@ -52,7 +59,7 @@ class StartPage(tk.Frame):
         mainlabel_frame = tk.Frame(self, bg=theme_color, relief='groove', bd=1)
         mainlabel_frame.pack(anchor=tk.N)
 
-        title_label = tk.Label(mainlabel_frame, text="Mucait's Websters English Dictionary", font=font, bg=theme_color,
+        title_label = tk.Label(mainlabel_frame, text="GoofyCoder's Websters English Dictionary", font=font, bg=theme_color,
                                fg='#b5e6e0')
         title_label.pack()
 
